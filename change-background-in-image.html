@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Remove Background from images</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+
+    <style>
+      #canvas {
+        background-image: url(http://127.0.0.1:8080/sea.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+
+ </head>
+
+  <body>
+    <img id='image' crossorigin='anonymous' width="600" height="450"/>
+    <canvas id="canvas"></canvas>
+  </body>
+  
+  <script src="change-background-in-image-script.js" defer></script>
+        
+</html>

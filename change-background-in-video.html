@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Remove Background from images</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <link rel="stylesheet" href="./change-background-in-video.css">
+    <style>
+      #canvas {
+        background-image: url('./images/sea.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 10px;
+      }
+    </style>
+
+ </head>
+
+  <body>
+    <div id="container">
+        <video id="webcam" autoplay width="640" height="500"></video>
+        <canvas id="canvas"></canvas>
+        
+
+    </div>
+    <section id="resultStream">
+      <div class="stream">
+        <h3>Result Stream</h3>
+        <div>
+          <video
+          muted
+            hidden
+            id="video-stream"
+          
+            autoplay
+            playsinline
+          ></video>
+        </div>
+      </div>
+    </section>
+  </body>
+  
+  <script src="change-background-in-video-script.js" defer></script>
+        
+</html>
