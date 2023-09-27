@@ -1,13 +1,15 @@
 let video = document.getElementById("webcam");
-let webcamCanvas = document.getElementById("canvas");
+//  img=require('./images/sea.jpg')
+let webcamCanvas = document.createElement("canvas");
 let webcamCanvasCtx = webcamCanvas.getContext('2d');
 let resultStream =document.getElementById("video-stream");
-let counter = 0;
-let loaded = false
+
 //In Memory Canvas used for model prediction
 var tempCanvas = document.createElement('canvas');
 var tempCanvasCtx = tempCanvas.getContext('2d');
-
+// resultStream.style.background = "url('./images/logo.png') no-repeat";
+webcamCanvas.hidden=true
+video.hidden=true
 let previousSegmentationComplete = true;
 
 let segmentationProperties = {
@@ -32,7 +34,7 @@ function main() {
             setResultStream();
         })
         .catch(e => {
-            console.log("Error occurred while getting the video stream");
+            console.error("Error occurred while getting the video stream",e);
         });
         }
         
@@ -81,6 +83,7 @@ function processSegmentation(segmentation) {
 
       
     }
+    main();
 
 function setResultStream() {
     console.log('working setResultStream')
@@ -95,4 +98,3 @@ function setResultStream() {
 }
 
     
-    main();

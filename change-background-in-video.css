@@ -1,4 +1,6 @@
 #video-stream{
-    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-        background-size: cover;
+    background-image: url("./images/logo.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
